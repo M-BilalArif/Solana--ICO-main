@@ -1,0 +1,21 @@
+.howto{
+    background-image: url(../img/howto/howt-bg-img.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    .image{
+        @include xxxl{
+            left: 362px;
+            bottom: -81px;
+        }
+        @include xxl{
+            left: 158px;
+            bottom: -50px;
+        }
+        img{
+            @include xxxl{
+                max-width: 420px;
+            }
+        }
+    }
+}

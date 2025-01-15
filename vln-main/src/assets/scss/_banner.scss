@@ -1,0 +1,44 @@
+.banner {
+    padding-top: 185px;
+    margin-bottom: -65px;
+    @include sm {
+        padding-top: 130px;
+    }
+    & .container {
+        @include xxxl {
+            max-width: calc(1254px + 24px);
+        }
+    }
+    & h1 {
+        text-shadow: 0px 3.174px 0px #000;
+        -webkit-text-stroke-width: var(--st, 2.11px);
+        -webkit-text-stroke-color: #000;
+        font-size: 56px;
+        line-height: normal;
+        @include xl {
+            font-size: 50px;
+        }
+        @include lg {
+            font-size: 44px;
+        }
+        @include md {
+            font-size: 40px;
+            --st: 1px;
+        }
+        @include sm {
+            font-size: 28px;
+            --st: 1px;
+        }
+    }
+    &-card {
+        box-shadow: 0 0 24px -10px $primary;
+    }
+    .Shadow {
+        box-shadow: 0 3px 36px -19px #000;
+    }
+    & .token {
+        @include xxl {
+            right: 20px;
+        }
+    }
+}

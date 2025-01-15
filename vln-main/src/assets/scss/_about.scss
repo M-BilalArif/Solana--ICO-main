@@ -1,0 +1,49 @@
+.about{
+    &::before {
+        position: absolute;
+        background-image: url(../img/about/about-shape-img.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 1066px;
+        height: 1109px;
+        top: 15%;
+        left: 11%;
+        content: "";
+        z-index: -2;
+        @include xxl{
+            width: 966px;
+            height: 1009px;
+            top: 6%;
+            left: 0%;
+        }
+        @include xl{
+            width: 966px;
+            height: 1009px;
+            top: 6%;
+            left: -5%;
+        }
+        @include lg{
+            width: 866px;
+            height: 909px;
+            top: 7%;
+            left: -12%;
+        }
+        @include md{
+            width: 766px;
+            height: 809px;
+            top: 10%;
+            left: -12%;
+        }
+        @include sm{
+            width: 666px;
+            height: 709px;
+            top: 4%;
+            left: -31%;
+        }
+    }
+    .card{
+        background-image: url(../img/about/card-img-bg.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}

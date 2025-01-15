@@ -1,0 +1,124 @@
+@keyframes headerAnimation {
+    0% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.heading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+    background-color: transparent;
+    padding: var(--navbar-padding-y) 0;
+    --navbar-padding-y: 30px;
+    @include md {
+        --navbar-padding-y: 24px;
+    }
+    @include sm {
+        --navbar-padding-y: 20px;
+    }
+    &.position-fixed {
+        position: fixed;
+        animation: headerAnimation .5s linear;
+        background-color: rgba($color: $white, $alpha: .6);
+        backdrop-filter: blur(13px);
+        --navbar-padding-y: 24px;
+        @include md {
+            --navbar-padding-y: 20px;
+        }
+        @include sm {
+            --navbar-padding-y: 1rem;
+        }
+    }
+    & .btn {
+        padding: 10px 18px;
+        line-height: 130%;
+    }
+    &-menu {
+        @include mmd {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba($color: $bg, $alpha: .90);
+            backdrop-filter: blur(10px);
+            padding: 24px;
+            z-index: 9;
+            transform: translateY(150%);
+            @include transition;
+            &.show-menu {
+                transform: translate(0, 0);
+            }
+        }
+        & .title {
+            margin-bottom: 32px;
+            @include sm {
+                margin-bottom: 24px;
+            }
+        }
+        & .heading-actions {
+            @include mmd {
+                margin-top: 32px;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+            @include sm {
+                margin-top: 26px;
+            }
+        }
+    }
+    &-link {
+        font-size: 16px;
+        line-height: 150%;
+        color: $white;
+        font-weight: 400;
+        font-family: $font-1;
+        display: block;
+        padding: 8px 17px;
+        cursor: pointer;
+        background-color: $black;
+        border-radius: 8px 8px 0px 0px;
+        @include lg {
+            padding: 10px 12px;
+        }
+        @include mmd {
+            padding: 10px 15px;
+            border-radius: 8px 0px 0px 8px;
+            font-size: 14px;
+        }
+        &:hover {
+            background-color: $primary;
+            color: $white;
+        }
+        &.active {
+            @include mmd {
+                background-color: $primary;
+                color: $white;
+            }
+        }
+    }
+    &-toggler {
+        --btn-padding-x: 4px;
+        --btn-padding-y: 5px;
+        padding: var(--btn-padding-y) var(--btn-padding-x);
+        border: none;
+        background-color: transparent;
+        color: $heading;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & svg {
+            width: 40px;
+            height: 40px;
+        }
+    }
+}

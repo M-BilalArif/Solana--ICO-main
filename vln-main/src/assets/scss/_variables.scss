@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pragati+Narrow:wght@400;700&display=swap');
+
+@font-face {
+    font-family: Gliker;
+    src: url(../fonts/Gliker-Bold.woff);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: Gliker;
+    src: url(../fonts/Gliker-SemiBold.woff);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Gliker;
+    src: url(../fonts/Gliker-Regular.woff);
+    font-weight: 400;
+}
+
+$font-1:'Gliker';
+$font-2:'Indie Flower',
+serif;
+$font-3:"Pragati Narrow", serif;
+$white:#fff;
+$black:#000;
+$primary: #F43E32;
+$secondary: #FEDB63;
+$text:#C0C3C5;
+$heading: $black;
+$border:#A6E0F5;
+$bg:#A6E0F5;
+:root {
+    scroll-behavior: auto !important;
+}

@@ -1,0 +1,55 @@
+.tokenomics {
+    padding-top: 90px;
+    padding-bottom: 70px;
+    @include lg {
+        padding-top: 70px;
+        padding-bottom: 60px;
+    }
+    @include md {
+        padding: 50px 0;
+    }
+    @include sm {
+        padding: 40px 0;
+    }
+    .Shadow {
+        box-shadow: 6px 6px 0px 0px #231F20;
+    }
+    & h2 {
+        margin-bottom: 127px;
+        @include xl {
+            margin-bottom: 110px;
+        }
+        @include lg {
+            margin-bottom: 80px;
+        }
+        @include md {
+            margin-bottom: 40px;
+        }
+        @include sm {
+            margin-bottom: 30px;
+        }
+    }
+    & .p {
+        color: #FFF;
+        text-shadow: 1.621px var(--ts, 3.242px) 0px #000;
+        -webkit-text-stroke-width: 0.81px;
+        -webkit-text-stroke-color: #000;
+        font-size: 38px;
+        font-weight: 700;
+        line-height: 140%;
+        text-transform: uppercase;
+        @include xl {
+            font-size: 34px;
+        }
+        @include lg {
+            font-size: 30px;
+        }
+        @include md {
+            font-size: 24px;
+        }
+        @include sm {
+            font-size: 20px;
+            --ts: 2px;
+        }
+    }
+}

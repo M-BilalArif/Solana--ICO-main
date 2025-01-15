@@ -1,0 +1,37 @@
+/* Accordion */
+
+.accordion {
+    &-item {
+        --padding: 24px;
+        border-radius: var(--accordion-border-radius, 12px);
+        background-color: var(--accordion-bg, #fff);
+        border: var(--border-width, 1px) solid var(--accordion-border-color, #000);
+        overflow: hidden;
+        @include md {
+            --padding: 20px;
+        }
+        @include sm {
+            --padding: 12px;
+        }
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+    &-button {
+        box-shadow: 0 0 0;
+        @include font-20;
+        font-weight: 500;
+        color: $heading;
+        padding: var(--padding);
+        font-family: $font-2;
+    }
+    &-body {
+        display: none;
+        padding: var(--padding);
+        background-color: var(--accordion-active-bg);
+        color: $black;
+        &.collapsed {
+            display: block;
+        }
+    }
+}

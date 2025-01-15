@@ -1,0 +1,14 @@
+.faq {
+    background-color: #FEDB63;
+    background-image: url(../img/faq/faq-bg.png);
+    background-size: cover;
+    h2 {
+        padding-bottom: 36px;
+        @include md {
+            padding-bottom: 30px;
+        }
+        @include sm {
+            padding-bottom: 20px;
+        }
+    }
+}
