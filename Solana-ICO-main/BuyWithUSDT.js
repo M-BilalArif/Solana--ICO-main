@@ -31,7 +31,7 @@ const salePeriods = [
     price: 0.001125,
     availableTokens: 80000000,
   },
-  {
+  {calculatePhaseBalance 
     start: "2025-01-25",
     end: "2025-02-04",
     price: 0.0012,
@@ -180,7 +180,7 @@ const transferToken = async (
     );
 
     // Create a recipient token account if it doesn't exist
-    if (!recipientTokenAccountInfo) {
+    if (!recipientTokenAccountInfo) { 
       transaction.add(
         createAssociatedTokenAccountInstruction(
           senderWallet.publicKey,
